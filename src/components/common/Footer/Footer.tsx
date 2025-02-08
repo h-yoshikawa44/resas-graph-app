@@ -7,8 +7,11 @@ const Footer: FC = () => {
     <footer css={footer}>
       <small data-testid="footerText">
         このアプリは{' '}
-        <a css={resasLink} href="https://opendata.resas-portal.go.jp/">
-          RESAS API
+        <a
+          css={resasLink}
+          href="https://yumemi-frontend-engineer-codecheck-api.vercel.app/api-doc"
+        >
+          ゆめみフロントエンドコーディング試験 API
         </a>{' '}
         のデータを使用しています。
       </small>
