@@ -7,7 +7,7 @@
 
 - Node.js：22.13.1
 - TypeScript：5.7.3
-- Next.js：14.1.0
+- Next.js：15.1.6
 
 API
 
