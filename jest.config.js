@@ -17,7 +17,7 @@ const config = {
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
   },
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-fixed-jsdom',
   testEnvironmentOptions: {
     customExportConditions: [''],
   },
