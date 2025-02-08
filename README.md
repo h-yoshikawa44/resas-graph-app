@@ -11,13 +11,14 @@
 
 API
 
-- [RESAS API](https://opendata.resas-portal.go.jp/)
+- [ゆめみフロントエンドコーディング試験 API](https://yumemi-frontend-engineer-codecheck-api.vercel.app/api-doc)
+  - RESAS API が 2025/03/24 に提供終了になったことで、RESAS API が元になっているこちらへ移行
 
 ※Node.js のバージョン管理には [Volta](https://volta.sh/) を使用。
 
 ## 環境構築
 
-RESAS API に登録して、API Key を取得 + .env.example をコピーして値をセットする（初回のみ）
+API のページから API Key を取得 + .env.example をコピーして値をセットする（初回のみ）
 
 ```bash
 cp .env.example .env.local
