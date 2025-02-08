@@ -5,8 +5,8 @@
 
 ## 構成
 
-- Node.js：20.9.0
-- TypeScript：5.3.3
+- Node.js：22.13.1
+- TypeScript：5.7.3
 - Next.js：14.1.0
 
 API
