@@ -6,7 +6,7 @@ describe('Footer', () => {
     render(<Footer />);
 
     expect(screen.getByTestId('footerText')).toHaveTextContent(
-      'このアプリは RESAS API のデータを使用しています。',
+      'このアプリは ゆめみフロントエンドコーディング試験 API のデータを使用しています。',
     );
   });
 });

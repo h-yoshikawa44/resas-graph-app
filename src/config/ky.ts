@@ -4,7 +4,8 @@ import {
   isMessageErrorResponse,
 } from '@/models/ErrorResponse';
 
-export const API_URL = 'https://opendata.resas-portal.go.jp/api/v1';
+export const API_URL =
+  'https://yumemi-frontend-engineer-codecheck-api.vercel.app/api/v1';
 
 export const DEFAULT_API_OPTIONS: Options = {
   prefixUrl: API_URL,
@@ -30,6 +31,7 @@ export const DEFAULT_API_OPTIONS: Options = {
 
         // RESAS API はエラー時にもヘッダーのステータスコードが200で返ってくることがあるので、詰めなおす
         // 400, 404（レスポンスボディがステータスコードだけの場合）
+        // ※移行した API では不要なケアかも
         if (isSimpleErrorResponse(data)) {
           init = { headers, status: parseInt(data), statusText: '' };
         }
