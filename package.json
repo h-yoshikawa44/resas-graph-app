@@ -17,7 +17,7 @@
     "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.3",
+    "@emotion/react": "^11.14.0",
     "highcharts": "^11.3.0",
     "highcharts-react-official": "^3.2.1",
     "isomorphic-fetch": "^3.0.0",
