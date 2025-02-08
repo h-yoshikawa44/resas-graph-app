@@ -11,7 +11,6 @@ const createJestConfig = nextJest({
 
 /** @type {import("jest").Config} */
 const config = {
-  setupFiles: ['<rootDir>/jest.polyfills.js'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   coverageProvider: 'v8',
   moduleNameMapper: {
