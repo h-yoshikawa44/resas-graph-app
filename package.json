@@ -57,7 +57,7 @@
     "typesync": "^0.12.1"
   },
   "volta": {
-    "node": "20.9.0"
+    "node": "22.13.1"
   },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged",
