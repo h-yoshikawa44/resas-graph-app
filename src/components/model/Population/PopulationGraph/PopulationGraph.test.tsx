@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import HighchartsReact from 'highcharts-react-official';
 import PopulationGraph from './PopulationGraph';
 import { populations } from '@/mock/data/population';
@@ -16,12 +16,16 @@ jest.mock('highcharts-react-official', () => {
 });
 
 describe('PopulationGraph', () => {
-  test('hand over props: HighchartsReact', () => {
+  test('hand over props: HighchartsReact', async () => {
     render(<PopulationGraph data={populations} />);
 
-    // props が子コンポーネントにちゃんと渡っているか確認
-    expect(screen.getByTestId('dummyHighchartsReactOptions')).toHaveTextContent(
-      '人口遷移グラフ:選択した都道府県のデータが表示されます。',
-    );
+    await waitFor(() => {
+      // props が子コンポーネントにちゃんと渡っているか確認
+      expect(
+        screen.getByTestId('dummyHighchartsReactOptions'),
+      ).toHaveTextContent(
+        '人口遷移グラフ:選択した都道府県のデータが表示されます。',
+      );
+    });
   });
 });
