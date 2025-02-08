@@ -8,4 +8,4 @@ const nextConfig = {
   transpilePackages: ['ky'],
 };
 
-module.exports = nextConfig;
+export default nextConfig;
