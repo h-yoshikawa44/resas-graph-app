@@ -15,7 +15,7 @@
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:stylelint": "npm run lint:stylelint -- --fix",
     "fix:prettier": "npm run check:prettier -- --write",
-    "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
+    "prepare": "lefthook install || echo 'Can not set git hooks'"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -38,11 +38,10 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-fixed-jsdom": "^0.0.9",
+    "lefthook": "^1.10.10",
     "msw": "^2.7.0",
-    "nano-staged": "^0.8.0",
     "postcss-styled-syntax": "^0.7.1",
     "prettier": "^3.4.2",
-    "simple-git-hooks": "^2.9.0",
     "stylelint": "^16.14.1",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard": "^37.0.0",
@@ -51,19 +50,5 @@
   },
   "volta": {
     "node": "22.13.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx nano-staged",
-    "prepare-commit-msg": "./.githooks/prepare-commit-msg \"$@\""
-  },
-  "nano-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write --loglevel=error",
-      "eslint --fix --quiet",
-      "stylelint --fix --quiet"
-    ],
-    "./**/*.{html,gql,graphql,json}": [
-      "prettier --write --loglevel=error"
-    ]
   }
 }
