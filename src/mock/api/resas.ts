@@ -46,7 +46,6 @@ export const mockPopulation: Resolver = ({ request }) => {
   if (request.headers.get('x-api-key') !== MOCK_RESAS_API_KEY) {
     return HttpResponse.json(forbidden);
   }
-  request;
 
   const url = new URL(request.url);
   const prefCode = url.searchParams.get('prefCode');
@@ -61,7 +60,7 @@ export const mockPopulation: Resolver = ({ request }) => {
   if (process.env.DUMMY_REQUEST === MOCK_NO_RESPONSE) {
     return HttpResponse.json({});
   } else if (process.env.DUMMY_REQUEST === MOCK_NOT_ALL_POPULATION) {
-    let dummyData = { ...populationCategoriesA };
+    const dummyData = { ...populationCategoriesA };
     dummyData.result = {
       boundaryYear: dummyData.result?.boundaryYear ?? 2012,
       data: dummyData.result?.data.filter((d) => d.label !== '総人口') ?? [],

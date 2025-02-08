@@ -45,8 +45,9 @@ describe('PrefectureFieldset', () => {
       />,
     );
 
-    expect(screen.getByTestId('prefectureFieldsetData').children)
-      .toBeEmptyDOMElement;
+    expect(screen.getByTestId('prefectureFieldsetData').children).toHaveLength(
+      0,
+    );
   });
 
   test('props: prefectures', () => {

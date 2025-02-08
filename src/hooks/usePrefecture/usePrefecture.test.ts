@@ -81,7 +81,7 @@ describe('usePrefecture', () => {
     await waitFor(() => {
       expect(renderResult.current.isLoading).toBe(false);
     });
-    expect(renderResult.current.prefectures).toBeUndefined;
+    expect(renderResult.current.prefectures).toBeUndefined();
     expect(renderResult.current.isLoading).toBe(false);
     expect(renderResult.current.errorMessage).toBe(
       '都道府県データの取得に失敗しました。お手数ですが、お時間経過後に再度お試しください。',
@@ -107,7 +107,7 @@ describe('usePrefecture', () => {
     await waitFor(() => {
       expect(renderResult.current.isLoading).toBe(false);
     });
-    expect(renderResult.current.prefectures).toBeUndefined;
+    expect(renderResult.current.prefectures).toBeUndefined();
     expect(renderResult.current.isLoading).toBe(false);
     expect(renderResult.current.errorMessage).toBe(
       '想定しない都道府県データが取得されました。',
