@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import 'modern-css-reset/dist/reset.min.css';
+import { resetStyle } from '@/styles/reset';
 
 export const globalStyle = css`
   html,
@@ -18,4 +18,6 @@ export const globalStyle = css`
   * {
     box-sizing: border-box;
   }
+
+  ${resetStyle}
 `;
